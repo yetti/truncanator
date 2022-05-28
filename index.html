@@ -38,7 +38,7 @@
                 <!-- Input -->
                 <div class="mt-10 lg:mt-0">
                   <h2 class="text-lg font-medium text-gray-900">Input</h2>
-                  <p class="text-sm text-gray-500 mb-2">One line per file path</p>
+                  <p class="text-sm text-gray-400 mb-2">One line per file path</p>
 
                   <label for="input" class="sr-only block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">Image
                     filenames</label>
@@ -51,7 +51,7 @@
                 <!-- Output -->
                 <div class="mt-10 lg:mt-0">
                   <h2 class="text-lg font-medium text-gray-900">Output</h2>
-                  <p class="text-sm text-gray-500 mb-2">Extracted filenames</p>
+                  <p class="text-sm text-gray-400 mb-2">Extracted filenames</p>
 
                   <label for="output" class="sr-only block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">Image
                     filenames</label>
@@ -89,13 +89,13 @@
                               </button>
                               <span class="ml-3 flex-grow flex flex-col" id="removePrefix-label">
                                 <span class="text-sm font-medium text-gray-900">Remove prefixes</span>
-                                <span class="text-sm text-gray-500">Can be a comma separated list of text. ("image-, file-")</span>
+                                <span class="text-sm text-gray-400">Can be a comma separated list of text. ("image-, file-")</span>
                               </span>
                             </div>
                           </div>
                           <div class="ml-14 grid grid-cols-6" x-show="removePrefix" x-collapse>
                             <label for="prefixes" class="sr-only block text-sm font-medium text-gray-700"
-                              aria-hidden="true"> First name </label>
+                              aria-hidden="true">Prefixes</label>
                             <div class="mt-1 col-span-4">
                               <input type="text" name="prefixes" id="prefixes" x-model="prefixes"
                                 class="shadow-sm focus:ring-blue-400 focus:border-blue-400 block w-full sm:text-sm border-gray-300 rounded-md">
@@ -119,16 +119,16 @@
                               </button>
                               <span class="ml-3 flex-grow flex flex-col" id="removeSuffix-label">
                                 <span class="text-sm font-medium text-gray-900">Remove suffixes</span>
-                                <span class="text-sm text-gray-500">Can be a comma separated list of text. ("-m, -c")</span>
+                                <span class="text-sm text-gray-400">Can be a comma separated list of text. ("-m, -c")</span>
                               </span>
                             </div>
                           </div>
                           <div class="ml-14 grid grid-cols-6" x-show="removeSuffix" x-collapse>
                             <label for="suffixes" class="sr-only block text-sm font-medium text-gray-700"
-                              aria-hidden="true"> First name </label>
+                              aria-hidden="true">Suffixes</label>
                             <div class="mt-1 col-span-4">
                               <input type="text" name="suffixes" id="suffixes" x-model="suffixes"
-                                class="shadow-sm focus:ring-indigo-500 focus:border-blue-400 block w-full sm:text-sm border-gray-300 rounded-md">
+                                class="shadow-sm focus:ring-blue-400 focus:border-blue-400 block w-full sm:text-sm border-gray-300 rounded-md">
                             </div>
                           </div>
                         </div>
@@ -148,7 +148,7 @@
                             </button>
                             <span class="ml-3 flex-grow flex flex-col" id="removeDuplicates-label">
                               <span class="text-sm font-medium text-gray-900">Remove duplicates</span>
-                              <span class="text-sm text-gray-500">Duplicates removed after truncation.</span>
+                              <span class="text-sm text-gray-400">Duplicates removed after truncation.</span>
                             </span>
                           </div>
                         </div>

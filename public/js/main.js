@@ -69,7 +69,7 @@ window.truncanator = function() {
     },
 
     unwrapQuotedText(txt) {
-      return txt.replace(/(^"|"$)/g, '');
+      return txt.trim().replace(/(^"|"$)/g, '');
     },
 
     getFilename(path) {

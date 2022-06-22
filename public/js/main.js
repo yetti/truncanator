@@ -1,15 +1,6 @@
 document.addEventListener('alpine:init', () => {
   window.Alpine = Alpine;
 })
-
-function sleep(milliseconds) {
-  var start = new Date().getTime();
-  for (var i = 0; i < 1e7; i++) {
-    if ((new Date().getTime() - start) > milliseconds){
-      break;
-    }
-  }
-}
   
 window.truncanator = function() {
   return {
@@ -26,7 +17,6 @@ window.truncanator = function() {
     processing: false,
 
     truncate() {
-      console.log('truncating...');
       this.processing = true;
 
       try {
@@ -60,12 +50,7 @@ window.truncanator = function() {
         console.error(ex);
       }
 
-      setTimeout(() => {
-        
-      }, 5000);
-
       this.processing = false;
-      console.log('done!');
     },
 
     unwrapQuotedText(txt) {
@@ -73,7 +58,8 @@ window.truncanator = function() {
     },
 
     getFilename(path) {
-      return path.split('\\').pop().split('/').pop()
+      const filename = path.split('\\').pop().split('/').pop();
+      return filename.substring(0, filename.lastIndexOf('.'));
     },
 
     truncatePrefix(txt, prefix) {
@@ -81,7 +67,7 @@ window.truncanator = function() {
     },
 
     truncateSuffix(txt, suffix) {
-      return txt.replace(new RegExp(suffix.trim() + ".[^/.]+$"), '')
+      return txt.replace(new RegExp(suffix.trim() + '$'), '')
     },
 
     processBtn() {
